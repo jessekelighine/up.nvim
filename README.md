@@ -10,7 +10,7 @@ you to navigate up the directory structure easily.
 
 ## Installation
 
-With [lazy.nvim](https://github.com/folke/lazy.nvim) and recommended keymap:
+With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
@@ -19,7 +19,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim) and recommended keymap:
 }
 ```
 
-This pluging provides the `Up` command with no default key mappings. You can
+This pluging provides the `Up` command with no default keybinding. You can
 define a custom keymap with the function `require"up".map`. The config shown
 above maps `<C-U>` in normal mode to the `Up` command.
 

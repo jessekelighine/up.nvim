@@ -1,7 +1,5 @@
 -- plugin/up.lua
 
-local desc = "Navigate Up in the Directory Structure"
-
 local up_by_name
 up_by_name = function(current_dir, pattern)
 	local current_dir_base = vim.fs.basename(current_dir)
@@ -28,7 +26,7 @@ vim.api.nvim_create_user_command(
 	end,
 	{
 		nargs = "?",
-		desc = desc,
+		desc = "Navigate Up in the Directory Structure",
 		complete = require "up-complete-function"
 	}
 )

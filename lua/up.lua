@@ -2,8 +2,8 @@
 
 local module = {}
 
+---@param lhs string The left-hand side keybinding to set for the "Up" command
 module.map = function(lhs)
-	local desc = "Navigate Up in the Directory Structure"
 	vim.keymap.set("n", lhs, function()
 		vim.ui.input(
 			{
@@ -17,7 +17,7 @@ module.map = function(lhs)
 				end
 			end
 		)
-	end, { desc = desc })
+	end, { desc = "Navigate Up in the Directory Structure" })
 end
 
 return module
