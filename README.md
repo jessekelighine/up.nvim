@@ -32,7 +32,7 @@ The `Up` command changes directory to a parent directory, depending on the argum
 
 ## Examples
 
-Suppose that you are in the directory `/home/user/projects/project/src/main.lua`.
+Suppose that you are editing the file `/home/user/projects/project/src/main.lua`.
 
 - If you run the command `:Up`, it will change the current working directory to `/home/user/projects/project`
 - If you run `:Up pro`, it will change the current working directory to `/home/user/projects/project`.
