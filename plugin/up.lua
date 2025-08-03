@@ -22,6 +22,7 @@ vim.api.nvim_create_user_command(
 			vim.notify(message, vim.log.levels.WARN)
 			return
 		end
+		vim.cmd("cd " .. destination)
 		vim.cmd("edit " .. destination)
 	end,
 	{
