@@ -1,6 +1,11 @@
 -- plugin/up.lua
 
 local up_by_name
+
+---Recursively searches for a parent directory that matches the given pattern.
+---@param current_dir string The current directory to start searching from.
+---@param pattern string The pattern to match against directory names.
+---@return string|nil path to the matching parent directory, or nil if not found.
 up_by_name = function(current_dir, pattern)
 	local current_dir_base = vim.fs.basename(current_dir)
 	local parent_dir = vim.fs.dirname(current_dir)

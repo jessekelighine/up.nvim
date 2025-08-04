@@ -2,7 +2,9 @@
 
 local module = {}
 
----@param lhs string The left-hand side keybinding to set for the "Up" command
+---Creates a keybinding for the "Up" command.
+---@param lhs string The left-hand side keybinding to set for the "Up" command.
+---@return nil
 module.map = function(lhs)
 	vim.keymap.set("n", lhs, function()
 		vim.ui.input(
