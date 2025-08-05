@@ -32,12 +32,13 @@ The `Up` command changes directory to a parent directory, depending on the argum
 
 ## Examples
 
-Suppose that you are editing the file `/home/user/projects/project/src/main.lua`.
+Suppose that you are editing the file `~/.dotfiles/home/.config/nvim/pack/main/start/plugin/lua/module.lua`.
 
-- If you run the command `:Up`, it will change the current working directory to `/home/user/projects/project`
-- If you run `:Up pro`, it will change the current working directory to `/home/user/projects/project`.
-- If you want to go up to the `/home/user/projects` directory, you can type `:Up pro` and press `<Tab>` for completion.
-- If you run `:Up ~`, it will change the current working directory to `/home/user`.
+- If you run `:Up`, it will change the current working directory to `~/.dotfiles/home/.config/nvim/pack/main/start/plugin`
+- If you run `:Up nv`, it will change the current working directory to `~/.dotfiles/home/.config/nvim`.
+- If you want to go up to the `~/.dotfiles/home/.config/nvim/pack` directory,
+  you can either `:Up pa` or type `:Up p` and press `<Tab>` for completion.
+- If you run `:Up ~`, it will change the current working directory to `~`.
 - If you run `:Up /`, it will change the current working directory to `/`.
 
 ## License
