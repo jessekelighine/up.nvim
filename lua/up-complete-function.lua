@@ -8,7 +8,7 @@ local complete_function = function(arg_lead)
 	local directories = vim.fn.reverse(vim.fn.split(current_dir, "/"))
 	local matches = {}
 	for _, dir in ipairs(directories) do
-		if dir:match("^" .. arg_lead) then
+		if vim.fn.match(dir, "^\\M" .. arg_lead) >= 0 then
 			table.insert(matches, dir)
 		end
 	end

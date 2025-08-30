@@ -13,7 +13,7 @@ up_by_name = function(current_dir, pattern)
 	if pattern == "~" then return vim.fn.expand("~") end
 	if pattern == ""  then return parent_dir end
 	if current_dir_base == "" then return nil end
-	if current_dir_base:match("^" .. pattern) then return current_dir end
+	if vim.fn.match(current_dir_base, "^\\M" .. pattern) >= 0 then return current_dir end
 	return up_by_name(parent_dir, pattern)
 end
 
