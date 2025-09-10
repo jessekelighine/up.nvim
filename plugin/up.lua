@@ -17,6 +17,13 @@ up_by_name = function(current_dir, pattern)
 	return up_by_name(parent_dir, pattern)
 end
 
+if vim.g.up_nvim_action == nil then
+	vim.g.up_nvim_action = function(destination)
+		vim.cmd("cd " .. destination)
+		vim.cmd("edit " .. destination)
+	end
+end
+
 vim.api.nvim_create_user_command(
 	"Up",
 	function(opts)
@@ -27,8 +34,7 @@ vim.api.nvim_create_user_command(
 			vim.notify(message, vim.log.levels.WARN)
 			return
 		end
-		vim.cmd("cd " .. destination)
-		vim.cmd("edit " .. destination)
+		vim.g.up_nvim_action(destination)
 	end,
 	{
 		nargs = "?",

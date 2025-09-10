@@ -30,6 +30,16 @@ The `Up` command changes directory to a parent directory, depending on the argum
 - If no argument is provided, it will go up one directory.
 - If an argument is provided, it will go up to the first parent directory whose name starts with the input.
 
+If you want to do something else with the target directory instead of `cd` and then `edit`,
+you can overwrite the default action by providing a function to the `vim.g.up_nvim_action` variable,
+e.g., the following code will simply print the target directory without doing anything else:
+
+```lua
+vim.g.up_nvim_action = function(dir) 
+    print("Target directory is: " .. dir)
+end
+```
+
 ## Examples
 
 Suppose that you are editing the file `~/.dotfiles/home/.config/nvim/pack/main/start/plugin/lua/module.lua`.
